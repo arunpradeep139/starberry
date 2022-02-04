@@ -1,0 +1,37 @@
+.btn-primary {
+    color: #fff !important;
+}
+
+.dataTables_filter {
+    float: right !important;
+}
+
+.dataTables_paginate {
+    float: right !important;
+}
+
+
+.dataTables_length {
+    float: left !important;
+}
+
+.dataTables_wrapper .col {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.form-control {
+    width:154%!Important;
+}
+
+.responsive {
+  width: 30%;
+  height: auto;
+}
+
+.dis-none {
+	display:none!important;
+}
+.dis-block {
+	display:block;
+} 
