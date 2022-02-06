@@ -1,7 +1,8 @@
 
 <style>
 
-<?php require_once("../assets/css/common.css"); ?>
+	<?php require_once("../assets/css/common.css"); ?>
+	<?php require_once("../assets/css/responsive.css"); ?>
 
 </style>
 
@@ -34,9 +35,9 @@
 								<table width="100%" class="table table-striped table-bordered table-hover" id="result_films_tbl">
 								<thead>
 								  <tr>
-									 <th>Title</th>
-									 <th>Director</th>
-									 <th>Producer</th>
+									 <th scope="col">Title</th>
+									 <th scope="col">Director</th>
+									 <th scope="col">Producer</th>
 								  </tr>
 							   </thead>
 							   <tbody>
@@ -44,9 +45,9 @@
 								<?php foreach ($films as $val) { ?>
 								
 									<tr>
-										<td><?php echo $val['title']; ?></td>
-										<td><?php echo $val['director']; ?></td>	
-										<td><?php echo $val['producer']; ?></td>
+										<td data-label="Title"><?php echo $val['title']; ?></td>
+										<td data-label="Director"><?php echo $val['director']; ?></td>	
+										<td data-label="Producer"><?php echo $val['producer']; ?></td>
 									</tr>
 								<?php } ?>
 								
@@ -75,11 +76,11 @@
 								<table width="100%" class="table table-striped table-bordered table-hover" id="result_vehicles_tbl">
 								<thead>
 								  <tr>
-									 <th>Name</th>
-									 <th>Model</th>
-									 <th>Manufacturer</th>
-									 <th>Speed</th>
-									 <th>Vehicle Class</th>
+									 <th scope="col">Name</th>
+									 <th scope="col">Model</th>
+									 <th scope="col">Manufacturer</th>
+									 <th scope="col">Speed</th>
+									 <th scope="col">Vehicle Class</th>
 								  </tr>
 							   </thead>
 							   <tbody>
@@ -87,11 +88,11 @@
 								<?php foreach ($vehicles as $val) { ?>
 								
 									<tr>
-										<td><?php echo $val['name']; ?></td>
-										<td><?php echo $val['model']; ?></td>	
-										<td><?php echo $val['manufacturer']; ?></td>
-										<td><?php echo $val['max_atmosphering_speed']; ?></td>	
-										<td><?php echo $val['vehicle_class']; ?></td>
+										<td data-label="Name"><?php echo $val['name']; ?></td>
+										<td data-label="Model"><?php echo $val['model']; ?></td>	
+										<td data-label="Manufacturer"><?php echo $val['manufacturer']; ?></td>
+										<td data-label="Speed"><?php echo $val['max_atmosphering_speed']; ?></td>	
+										<td data-label="Vehicle Class"><?php echo $val['vehicle_class']; ?></td>
 									</tr>
 								<?php } ?>
 								
@@ -120,9 +121,9 @@
 								<table width="100%" class="table table-striped table-bordered table-hover" id="result_species_tbl">
 								<thead>
 								  <tr>
-									 <th>Name</th>
-									 <th>Designation</th>
-									 <th>Average Height</th>
+									 <th scope="col">Name</th>
+									 <th scope="col">Designation</th>
+									 <th scope="col">Average Height</th>
 								  </tr>
 							   </thead>
 							   <tbody>
@@ -130,9 +131,9 @@
 								<?php foreach ($species as $val) { ?>
 								
 									<tr>
-										<td><?php echo $val['name']; ?></td>
-										<td><?php echo $val['designation']; ?></td>	
-										<td><?php echo $val['average_height']; ?></td>
+										<td data-label="Name"><?php echo $val['name']; ?></td>
+										<td data-label="Designation"><?php echo $val['designation']; ?></td>	
+										<td data-label="Average Height"><?php echo $val['average_height']; ?></td>
 									</tr>
 								<?php } ?>
 								
@@ -161,9 +162,9 @@
 								<table width="100%" class="table table-striped table-bordered table-hover" id="result_starships_tbl">
 								<thead>
 								  <tr>
-									 <th>Name</th>
-									 <th>Model</th>
-									 <th>Starship Class</th>
+									 <th scope="col">Name</th>
+									 <th scope="col">Model</th>
+									 <th scope="col">Starship Class</th>
 								  </tr>
 							   </thead>
 							   <tbody>
@@ -171,9 +172,9 @@
 								<?php foreach ($starships as $val) { ?>
 								
 									<tr>
-										<td><?php echo $val['name']; ?></td>
-										<td><?php echo $val['model']; ?></td>	
-										<td><?php echo $val['starship_class']; ?></td>
+										<td data-label="Name"><?php echo $val['name']; ?></td>
+										<td data-label="Model"><?php echo $val['model']; ?></td>	
+										<td data-label="Starship Class"><?php echo $val['starship_class']; ?></td>
 									</tr>
 								<?php } ?>
 								

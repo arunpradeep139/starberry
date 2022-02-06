@@ -1,8 +1,9 @@
 
 <style>
 
-<?php require_once("../assets/css/common.css"); ?>
-
+	<?php require_once("../assets/css/common.css"); ?>
+	<?php require_once("../assets/css/responsive.css"); ?>
+	
 </style>
 
 <head>
@@ -32,18 +33,18 @@
 					<div class="row mt-3">
 						<div class="col-md-12" id="div_result">
 							<div class="table-responsive" id="orderperiod_tablesection">
-								<table width="100%" class="table table-striped table-bordered table-hover" id="result_tbl">
+								<table id="result_tbl">
 								<thead>
 								  <tr>
-									 <th>Name</th>
-									 <th>Height</th>
-									 <th>Mass</th>
-									 <th>Hair Color</th>
-									 <th>Skin Color</th>
-									 <th>Eye Color</th>
-									 <th>Birth Year</th>
-									 <th>Gender</th>
-									 <th>Action</th>
+									 <th scope="col" style="width:15%;">Name</th>
+									 <th scope="col" style="width:10%;">Height</th>
+									 <th scope="col" style="width:10%;">Mass</th>
+									 <th scope="col" style="width:13%;">Hair Color</th>
+									 <th scope="col" style="width:13%;">Skin Color</th>
+									 <th scope="col" style="width:10%;">Eye Color</th>
+									 <th scope="col" style="width:13%;">Birth Year</th>
+									 <th scope="col" style="width:10%;">Gender</th>
+									 <th scope="col" style="width:15%;">Action</th>
 								  </tr>
 							   </thead>
 							   <tbody>
@@ -57,15 +58,15 @@
 								 foreach ($data as $val) { ?>
 								
 									<tr>
-										<td style="width: 350px!important;"><?php echo $val['name']; ?></td>
-										<td style="width: 60px!important;"><?php echo $val['height']; ?></td>	
-										<td style="width: 60px!important;"><?php echo $val['mass']; ?></td>
-										<td style="width: 250px!important;"><?php echo $val['hair_color']; ?></td>
-										<td style="width: 250px!important;"><?php echo $val['skin_color']; ?></td>
-										<td style="width: 250px!important;"><?php echo $val['eye_color']; ?></td>
-										<td style="width: 250px!important;"><?php echo $val['birth_year']; ?></td>
-										<td style="width: 60px!important;"><?php echo $val['gender']; ?></td>
-										<td style="width: 350px!important;text-align:center;">
+										<td data-label="Name"><?php echo $val['name']; ?></td>
+										<td data-label="Height"><?php echo $val['height']; ?></td>	
+										<td data-label="Mass"><?php echo $val['mass']; ?></td>
+										<td data-label="Hair Color"><?php echo $val['hair_color']; ?></td>
+										<td data-label="Skin Color"><?php echo $val['skin_color']; ?></td>
+										<td data-label="Eye Color"><?php echo $val['eye_color']; ?></td>
+										<td data-label="Birth Year"><?php echo $val['birth_year']; ?></td>
+										<td data-label="Gender"><?php echo $val['gender']; ?></td>
+										<td data-label="Action">
 											<button type="button" title="Info" id="update" onclick="show_details('<?php echo $val['character_id']; ?>')" class="btn btn-primary" style="color:white!important;"><i class="fa fa-info"></i></button>
 											<button type="button" title="Update" id="update" onclick="Update_record('<?php echo $val['character_id']; ?>')" class="btn btn-warning" style="color:white!important;"><i class="fas fa-edit"></i></button>
 											<button type="button" title="Delete" id="delete" onclick="Delete_model_show('<?php echo $val['character_id']; ?>')" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>                    
@@ -99,50 +100,40 @@
 					<table>
 						
 						<tr>
-							<td style="width:130px;">
+							<td style="text-align:left;">
 								<label>Name</label>
-							</td>
-							<td>
 							</td>
 							<td>
 								<input type="text" class="form-control input-normal"  id="txt_name" name="txt_name" placeholder="Name">
 							</td>
 						</tr>
 						<tr>
-							<td style="width:130px;">
+							<td style="text-align:left;">
 								<label>Height</label>
-							</td>
-							<td>
 							</td>
 							<td>
 								<input type="number" class="form-control"  id="txt_height" name="txt_height" placeholder="Height">
 							</td>
 						</tr>
 						<tr>
-							<td style="width:130px;">
+							<td style="text-align:left;">
 								<label>Mass</label>
-							</td>
-							<td>
 							</td>
 							<td>
 								<input type="number" class="form-control"  id="txt_mass" name="txt_mass" placeholder="Mass / Weight">
 							</td>
 						</tr>
 						<tr>
-							<td style="width:130px;">
+							<td style="text-align:left;">
 								<label>Hair Color</label>
-							</td>
-							<td>
 							</td>
 							<td>
 								<input type="text" class="form-control"  id="txt_hair_color" name="txt_hair_color" placeholder="Hair Color Name">
 							</td>
 						</tr>
 						<tr>
-							<td style="width:130px;">
+							<td style="text-align:left;">
 								<label>Skin Color</label>
-							</td>
-							<td>
 							</td>
 							<td>
 								<input type="text" class="form-control"  id="txt_skin_color" name="txt_skin_color" placeholder="Skin Color">
